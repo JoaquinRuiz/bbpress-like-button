@@ -317,11 +317,11 @@ class bbpress_like {
     /* STADISTICS END */
     
     /* OUTPUT FUNCTIONS START */
-    public function bbpl_show_button($echo = true){
+    public function bbpl_show_button($num, $echo = true){
         if ( !is_user_logged_in() ) return; //only for logged users
         
         global $post;
-        $post_id = $post->ID;
+        $post_id = $num; error_log($post_id);
         $user_id = get_current_user_id();
         
         $liked = ($this->get_like($post_id,$user_id)) == NULL ? false : true;

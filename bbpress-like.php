@@ -13,7 +13,7 @@ load_plugin_textdomain( 'bbpl', false, dirname( plugin_basename( __FILE__ ) ) . 
 require_once(dirname(__FILE__).'/class.bbpress_like.php');
 
 //Public function for showing the button manually
-function bbp_like_button($echo = true){
+function bbp_like_button($num, $echo = true){
     global $bbpl;
-    $bbpl->bbpl_show_button($echo);
+    $bbpl->bbpl_show_button($num, $echo);
 }

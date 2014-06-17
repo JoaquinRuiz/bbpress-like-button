@@ -20,10 +20,10 @@ jQuery(function() {
                 button.removeClass('like-loading').addClass('liked');
                 var likes_number = $('.bbpl_number');
                 if(likes_number){
-                    likes_number.text(parseInt(likes_number.text(),10) + 1);
+                    likes_number.text(parseInt(parseInt(likes_number.text(),10) + 1));
                 }
             });
-            
+            location.reload();
         });
         
         $("span.who_liked[title]").tooltip({
